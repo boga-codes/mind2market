@@ -4,7 +4,7 @@
 
 import axios from 'axios'
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+const API_BASE_URL = import.meta.env.VITE_API_URL || ''
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -23,29 +23,29 @@ export const apiService = {
 
   // V1 - Analytics
   getTopSkills: async (limit = 20) => {
-    const response = await api.get(`/v1/skills/top?limit=${limit}`)
+    const response = await api.get(`/api/v1/skills/top?limit=${limit}`)
     return response.data
   },
 
   getSkillsByLocation: async (limitPerLocation = 10) => {
-    const response = await api.get(`/v1/skills/by-location?limit_per_location=${limitPerLocation}`)
+    const response = await api.get(`/api/v1/skills/by-location?limit_per_location=${limitPerLocation}`)
     return response.data
   },
 
   forecastSkillDemand: async (skill, months = 6) => {
-    const response = await api.get(`/v1/skills/forecast?skill=${encodeURIComponent(skill)}&months=${months}`)
+    const response = await api.get(`/api/v1/skills/forecast?skill=${encodeURIComponent(skill)}&months=${months}`)
     return response.data
   },
 
   // V2 - Emerging Skills
   getEmergingSkills: async (minClusterSize = 3) => {
-    const response = await api.get(`/v2/skills/emerging?min_cluster_size=${minClusterSize}`)
+    const response = await api.get(`/api/v2/skills/emerging?min_cluster_size=${minClusterSize}`)
     return response.data
   },
 
   // V2 - Roadmap
   getSkillRoadmap: async (skill) => {
-    const response = await api.get(`/v2/skill/roadmap?skill=${encodeURIComponent(skill)}`)
+    const response = await api.get(`/api/v2/skill/roadmap?skill=${encodeURIComponent(skill)}`)
     return response.data
   },
 
@@ -54,7 +54,7 @@ export const apiService = {
     const formData = new FormData()
     formData.append('file', file)
     
-    const response = await api.post('/resume/analyze', formData, {
+    const response = await api.post('/api/analyze', formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
