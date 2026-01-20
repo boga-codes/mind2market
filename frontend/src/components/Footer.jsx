@@ -31,7 +31,7 @@ function Footer() {
         <div className="mt-8 pt-8 border-t border-gray-700 text-center text-sm">
           <p className="mb-2">&copy; 2026 Mind2Market. All rights reserved.</p>
           <p className="text-gray-400 dark:text-gray-500 text-xs">
-            Designed & Developed by <span className="text-white font-medium">Abhishek & Varsha</span>
+            Designed & Developed by <span className="text-white font-medium">ABHISHEK BOGA & VARSHA REDDY</span>
           </p>
         </div>
       </div>
