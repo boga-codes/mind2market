@@ -1,0 +1,19 @@
+/* Scanning animation */
+@keyframes scanning {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(400%);
+    opacity: 0;
+  }
+}
+
+.animate-scanning {
+  animation: scanning 2s ease-in-out infinite;
+}
+
