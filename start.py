@@ -3,9 +3,11 @@
 Production startup script for Render deployment
 """
 import os
+import sys
 
 # Change to backend directory so relative imports work
 os.chdir('backend')
+sys.path.insert(0, '.')
 
 from main import app
 import uvicorn
