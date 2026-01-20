@@ -1,21 +1,21 @@
 # Web framework
-fastapi==0.104.1
-uvicorn[standard]==0.24.0
+fastapi>=0.110.0
+uvicorn[standard]>=0.24.0
 
 # Core numeric stack (Render compatible)
-numpy==1.26.4
-pandas==1.5.3
+numpy>=1.26.4
+pandas>=1.5.3
 
 
 # NLP (lightweight only)
 nltk>=3.8.1
 
 # Utilities
-python-multipart==0.0.6
-aiofiles==23.2.1
-PyPDF2==3.0.1
-python-docx==1.1.0
+python-multipart>=0.0.6
+aiofiles>=23.2.1
+PyPDF2>=3.0.1
+python-docx>=1.1.0
 
 # Pydantic (FastAPI compatible)
-pydantic==2.5.0
-pydantic-settings==2.1.0
+pydantic>=2.6.0
+pydantic-settings>=2.2.0
